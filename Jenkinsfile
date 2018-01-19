@@ -15,13 +15,12 @@ pipeline {
 						}
 						}
 						
-						
+						post {
+success {
+archiveArtifacts artifacts: 'rectangle.jar', fingerprint:
+true
+}
+}
 						
 						
 }
-stage('run') {
-						post {
-						success {
-						archiveArtifacts artifacts: 'rectangle.jar', fingerprint:true
-						}
-						}	
